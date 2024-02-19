@@ -26,6 +26,7 @@ resource "aws_rds_cluster" "app5-rds-cluster" {
   cluster_identifier = "app5-rds-cluster"
   allocated_storage       = 10
   backup_retention_period = 15
+  storage_encrypted = true
 }
 
 resource "aws_rds_cluster" "app6-rds-cluster" {
