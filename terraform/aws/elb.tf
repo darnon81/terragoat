@@ -31,9 +31,10 @@ resource "aws_elb" "weblb" {
     git_file             = "terraform/aws/elb.tf"
     git_last_modified_at = "2020-06-16 14:46:24"
     git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "try-bridgecrew"
+    git_modifiers        = "nimrodkor/orshapira"
+    git_org              = "darnon81"
     git_repo             = "terragoat"
     yor_trace            = "9a19ccdb-03ff-4893-9063-75a03294b33a"
+    yor_name             = "weblb"
   }
 }
