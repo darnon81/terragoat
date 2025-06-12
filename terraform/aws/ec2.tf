@@ -48,6 +48,7 @@ resource "aws_ebs_volume" "web_host_storage" {
     yor_trace            = "39317050-34d5-449d-a9fc-818eb1774f33"
     yor_name             = "web_host_storage"
   }
+  encrypted = true
 }
 
 resource "aws_ebs_snapshot" "example_snapshot" {
