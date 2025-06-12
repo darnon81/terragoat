@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
 env:
-  CORTEX_API_KEY: ${{secrets.CORTEX_API_KEY}}
-  CORTEX_API_KEY_ID: ${{secrets.CORTEX_API_KEY_ID}}
+  CORTEX_API_KEY: ${{secrets.CORTEX_API_KEY2}}
+  CORTEX_API_KEY_ID: ${{secrets.CORTEX_API_KEY_ID2}}
   CORTEX_API_URL: https://api-viso-bwh2lxurltf3u9sixmlxbq.xdr-qa2-uat.us.paloaltonetworks.com
   CORTEX_CLI_VERSION: 0.11.16
   
@@ -33,8 +33,8 @@ jobs:
 
     - name: Pull Docker Image
       run: |
-        docker pull distributions-dev.traps.paloaltonetworks.com/cli-docker/${{env.TEMP_TOKEN}}/method:arm64-${{env.CORTEX_CLI_VERSION}}-dev
-        docker tag distributions-dev.traps.paloaltonetworks.com/cli-docker/${{env.TEMP_TOKEN}}/method:arm64-${{env.CORTEX_CLI_VERSION}}-dev cortexcli:${{env.CORTEX_CLI_VERSION}}
+        docker pull distributions-dev.traps.paloaltonetworks.com/cli-docker/${{env.TEMP_TOKEN}}/method:amd64-${{env.CORTEX_CLI_VERSION}}-dev
+        docker tag distributions-dev.traps.paloaltonetworks.com/cli-docker/${{env.TEMP_TOKEN}}/method:amd64-${{env.CORTEX_CLI_VERSION}}-dev cortexcli:${{env.CORTEX_CLI_VERSION}}
 
     - name: Run Docker Container
       run: |
